@@ -33,22 +33,20 @@ Dist::Zilla::Plugin::TestRun - run ./Build runtest on the build distribution
 
 =head1 SYNOPSIS
 
-In the dist.ini:
+1. In the dist.ini:
 
     [ModuleBuild]
     mb_class = Test::Run::Builder
     [TestRun]
 
-    ; Optionally
-    [@Basic]
-    -remove = MBTestRunner
+2. Put C<inc/Test/Run/Builder.pm> in the repository.
 
-Put C<inc/Test/Run/Builder.pm> in the repository.
+3. From the command line
 
-From the commnd line
+    $ dzil test
+    $ dzil test --release
 
-    $ dzil runtest
-    $ dzil runtest --release
+Will run using "./Build runtest" as well.
 
 =head1 VERSION
 
