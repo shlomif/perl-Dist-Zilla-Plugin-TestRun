@@ -4,7 +4,8 @@ use Moose;
 
 our $VERSION = '0.0.1';
 
-with(
+with
+(
     'Dist::Zilla::Role::TestRunner',
 );
 
@@ -19,4 +20,35 @@ sub test
 }
 
 1;
+
+__END__
+
+=pod
+
+=encoding utf8
+
+=head1 NAME
+
+Dist::Zilla::Plugin::TestRun - run ./Build runtest on the build distribution
+
+=head1 SYNOPSIS
+
+In the dist.ini:
+
+    [TestRun]
+
+From the commnd line
+
+    $ dzil runtest
+    $ dzil runtest --release
+
+=head1 VERSION
+
+version 0.0.1
+
+=head1 SUBROUTINES/METHODS
+
+=head2 test()
+
+Needed by L<Dist::Zilla> .
 

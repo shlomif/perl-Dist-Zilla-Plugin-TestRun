@@ -5,8 +5,6 @@ use warnings;
 
 use 5.014;
 
-our $VERSION = '0.0.1';
-
 use Dist::Zilla::App -command;
 
 use Dist::Zilla::Plugin::TestRun;
