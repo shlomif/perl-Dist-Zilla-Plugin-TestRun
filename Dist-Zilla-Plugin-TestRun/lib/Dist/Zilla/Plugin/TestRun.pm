@@ -58,3 +58,8 @@ version 0.0.1
 
 Needed by L<Dist::Zilla> .
 
+=head1 THANKS
+
+Thanks to rwstauner and cjm on #distzilla on irc.perl.org for providing
+some help and insights.
+
