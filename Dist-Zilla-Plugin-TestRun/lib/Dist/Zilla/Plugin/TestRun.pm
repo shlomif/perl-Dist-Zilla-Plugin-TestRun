@@ -1,5 +1,7 @@
 package Dist::Zilla::Plugin::TestRun;
 
+use 5.012;
+
 use Moose;
 
 our $VERSION = '0.0.1';
