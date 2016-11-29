@@ -4,7 +4,7 @@ use 5.012;
 
 use Moose;
 
-our $VERSION = '0.0.2';
+our $VERSION = 'v0.0.2';
 
 with
 (
