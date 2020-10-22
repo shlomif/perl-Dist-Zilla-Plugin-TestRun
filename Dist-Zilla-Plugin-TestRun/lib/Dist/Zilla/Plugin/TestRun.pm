@@ -1,24 +1,20 @@
 package Dist::Zilla::Plugin::TestRun;
 
-use 5.012;
+use 5.014;
 
 use Moose;
 
-our $VERSION = 'v0.0.2';
-
-with
-(
-    'Dist::Zilla::Role::TestRunner',
-);
+with( 'Dist::Zilla::Role::TestRunner', );
 
 sub test
 {
-    my ($self, $target) = @_;
+    my ( $self, $target ) = @_;
 
-    my $cmd = 'runtest';
+    my $cmd     = 'runtest';
     my @testing = $self->zilla->logger->get_debug ? '--verbose' : ();
 
-    system $^X, 'Build', $cmd, @testing and die "error running $^X Build $cmd\n";
+    system $^X, 'Build', $cmd, @testing
+        and die "error running $^X Build $cmd\n";
 }
 
 1;
@@ -50,10 +46,6 @@ Dist::Zilla::Plugin::TestRun - run ./Build runtest on the build distribution
 
 Will run using "./Build runtest" as well.
 
-=head1 VERSION
-
-version 0.0.1
-
 =head1 SUBROUTINES/METHODS
 
 =head2 test()
@@ -64,4 +56,3 @@ Needed by L<Dist::Zilla> .
 
 Thanks to rwstauner and cjm on #distzilla on irc.perl.org for providing
 some help and insights.
-
